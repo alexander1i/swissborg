@@ -1,0 +1,14 @@
+//
+//  FetchTraidingPairsRepositoryProtocol.swift
+//  swissborg
+//
+//  Created by Alexander Lisovyk on 25.06.22.
+//
+
+import Foundation
+import Combine
+import Moya
+
+protocol FetchTraidingPairsRepositoryProtocol {
+    func fetchTraidingPairs(cryptoSymbols: [String], fiatSymbol: String) -> AnyPublisher<[[Any]]?, MoyaError>
+}
